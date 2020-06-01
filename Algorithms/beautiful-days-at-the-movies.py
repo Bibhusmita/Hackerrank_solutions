@@ -24,7 +24,6 @@ def beautifulDays(i, j, k):
 
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     ijk = input().split()
 
@@ -36,6 +35,6 @@ if __name__ == '__main__':
 
     result = beautifulDays(i, j, k)
 
-    fptr.write(str(result) + '\n')
+    print(str(result) + '\n')
 
-    fptr.close()
+    
