@@ -14,7 +14,6 @@ def alternatingCharacters(s):
             c += 1
     return c
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     q = int(input())
 
@@ -23,6 +22,5 @@ if __name__ == '__main__':
 
         result = alternatingCharacters(s)
 
-        fptr.write(str(result) + '\n')
+        print(str(result) + '\n')
 
-    fptr.close()
