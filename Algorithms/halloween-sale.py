@@ -10,25 +10,15 @@ import sys
 def howManyGames(p, d, m, s):
     # Return the number of games you can buy
     count = 0
-    if s>=p:
+    while s >= p:
         s -= p
         count +=1
-    while s>m:
-        if (p-d)>m:
-            p -= d
-            s -= p
-            count += 1
-        else:
-            s -= m
-            count += 1
-    return count
-
-    
+        p = max(p-d,m)
+    return count    
          
 
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     pdms = input().split()
 
@@ -42,6 +32,4 @@ if __name__ == '__main__':
 
     answer = howManyGames(p, d, m, s)
 
-    fptr.write(str(answer) + '\n')
-
-    fptr.close()
+    print(answer)
