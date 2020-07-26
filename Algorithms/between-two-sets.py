@@ -26,7 +26,7 @@ def getTotalX(a, b):
     for n in b[1:]:
         GCD = math.gcd(GCD,n)
     for i in range(lcm, GCD+1,lcm):
-        if math.gcd(i, GCD) == i:
+        if GCD % i == 0:
             c += 1
     return c
 
